@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-		<link rel="stylesheet" type="text/css" href="style/scrollpath.css" />
-		<link rel="stylesheet" type="text/css" href="style/main.css" /> 
-		<link href="http://fonts.googleapis.com/css?family=Terminal+Dosis&subset=latin" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="script/lib/prefixfree.min.js"></script>
-		<!--[if lt IE 9]>
-			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-	<body>
-		<nav>
-			
-		</nav>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
-	<script type="text/javascript" src="script/lib/jquery.easing.js"></script>
-	<script type="text/javascript" src="script/jquery.scrollpath.js"></script>
-	</body>
+	<script type="text/javascript" src="main.js"></script>
+	     <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="pointpoint/assets/css/styles.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster+Two" />
+        <link rel="stylesheet" href="pointpoint/assets/jquery.pointpoint/jquery.pointpoint.css" />
+        
+</head>
+<body>
+	<div class='selector'>
+		<ul>
+			<li>
+				<input id='c1' type='checkbox'>
+				<label for='c1'>Option 1</label>
+			</li>
+			<li>
+				<input id='c2' type='checkbox'>
+				<label for='c2'>Option 2</label>
+			</li>
+			<li>
+				<input id='c3' type='checkbox'>
+				<label for='c3'>Option 3</label>
+			</li>
+			<li>
+				<input id='c4' type='checkbox'>
+				<label for='c4'>Option 4</label>
+			</li>
+			<li>
+				<input id='c5' type='checkbox'>
+				<label for='c5'>Option 5</label>
+			</li>
+			<li>
+				<input id='c6' type='checkbox'>
+				<label for='c6'>Option 6</label>
+			</li>
+			<li>
+				<input id='c7' type='checkbox'>
+				<label for='c7'>Option 7</label>
+			</li>
+			<li>
+				<input id='c8' type='checkbox'>
+				<label for='c8'>Option 8</label>
+			</li>
+		</ul>
+		<button>Click here</button>
+	</div>
+</body>
+ <!-- Including The jQuery Library -->
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		
+		<!-- Including the PointPoint() Plugin -->
+		<script src="pointpoint/assets/jquery.pointpoint/transform.js"></script>
+		<script src="pointpoint/assets/jquery.pointpoint/jquery.pointpoint.js"></script>
+		
+		<!-- The main script file -->
+        <script src="pointpoint/assets/js/script.js"></script>
+        <script>
+        $(function(){
+        	$('.selector').pointPoint();
+        });
+     	</script>
 </html>
