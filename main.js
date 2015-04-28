@@ -76,7 +76,7 @@ $(document).ready(function(){
         addBird("7","bird7.png");
    });
      $("#c8").on("click",function(){
-        addBird("8","bird7.png");
+        addBird("8","bird8.png");
     });
 });
 
@@ -142,4 +142,5 @@ function resetBird() {
 
     $('.bird').height("200px"); 
     $('.bird').width("200px");
+    $('.bird').attr("src","images/bird.png");
 }
