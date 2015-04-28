@@ -85,7 +85,7 @@ body {
 	cursor: pointer;
 	box-shadow: none;
 	transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
-    background-image:  url(images/bird2.png)
+    background:#FFF;
     
 }
 
@@ -112,7 +112,11 @@ body {
 }
 
 .bird{
-	width:100px;
-	height:100px;
+	width:200px;
+	height:200px;
 	position:fixed;
+}
+
+.bird-select{
+	background-image: url(images/bird3.png));
 }

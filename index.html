@@ -3,49 +3,67 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
-	<script type="text/javascript" src="main.js"></script>
-	     <!-- Our CSS stylesheet file -->
-        <link rel="stylesheet" href="pointpoint/assets/css/styles.css" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster+Two" />
-        <link rel="stylesheet" href="pointpoint/assets/jquery.pointpoint/jquery.pointpoint.css" />
-    <script>
-        
-    </script>
+	
+	<!-- Our CSS stylesheet file -->
+	<link rel="stylesheet" href="pointpoint/assets/css/styles.css" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster+Two" />
+	<link rel="stylesheet" href="pointpoint/assets/jquery.pointpoint/jquery.pointpoint.css" />
+	<script>
+
+	</script>
 </head>
 <body>
 	<div class='selector'>
 		<ul>
 			<li>
-				<input id='c1' type='checkbox' style="background-image: url(images/bird.png)">
+				<input id='c1' class="bird-select" type='checkbox'>
+				<label for='c1' >
+					<img src="images/bird.png" alt="Smiley face" height="80" width="80">
+				</label>
 				
 			</li>
 			<li>
-				<input id='c2' type='checkbox' style="background-image:  url(images/bird.png)">
+				<input id='c2' type='checkbox' >				
+				<label for='c2' >
+					<img src="images/bird2.png" alt="Smiley face" height="80" width="80">
+				</label>
 				
 			</li>
 			<li>
-				<input id='c3' type='checkbox' >
-				<label for='c3' style="background-image:  url(images/bird2.png)" ></label>
+				<input id='c3' type='checkbox'>
+				<label for='c3' >
+					<img src="images/bird3.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 			<li>
-				<input id='c4' type='checkbox' style="background-image:  url(images/bird3.png)">
-				<label for='c4'>Southeast</label>
+				<input id='c4' type='checkbox' >
+				<label for='c4'>
+					<img src="images/bird4.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 			<li>
-				<input id='c5' type='checkbox' style="background-image:  url(images/bird4.png)">
-				<label for='c5'>South</label>
+				<input id='c5' type='checkbox'>
+				<label for='c5' class="bird-select">
+					<img src="images/bird5.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 			<li>
-				<input id='c6' type='checkbox' style="background-image:  url(images/bird5.png)">
-				<label for='c6'>Sorthwest</label>
+				<input id='c6' type='checkbox' >
+				<label for='c6' class="bird-select">
+					<img src="images/bird6.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 			<li>
-				<input id='c7' type='checkbox' style="background-image:  url(images/bird6.png)">
-				<label for='c7'>West</label>
+				<input id='c7' type='checkbox' style="background-image:  url(images/bird7.png)">
+				<label for='c7' class="bird-select">
+					<img src="images/bird7.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 			<li>
 				<input id='c8' type='checkbox' style="background-image:  url(images/bird7.png)">
-				<label for='c8'>Northwest</label>
+				<label for='c8' class="bird-select">
+					<img src="images/bird7.png" alt="Smiley face" height="80" width="80">
+				</label>
 			</li>
 		</ul>
 		<button>Click here</button>
@@ -53,7 +71,20 @@
 
 	<img class="bird" src="images/bird.png" /> 
 </body>
- <!-- Including The jQuery Library -->
-		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<!-- Including The jQuery Library -->
+
+<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+<script>
 	
+	$(document).ready(function(){
+		$(".bird-select").on("click",function(){
+
+		});
+		animateBird();
+		
+	});
+
+</script>
 </html>

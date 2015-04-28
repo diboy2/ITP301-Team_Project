@@ -1,6 +1,6 @@
 var nbOptions = 8;
 var angleStart = -360;
-
+var birds = [];
 // jquery rotate animation
 function rotate(li,d) {
     $({d:angleStart}).animate({d:d}, {
@@ -29,12 +29,16 @@ $('.selector button').click(function(e) {
 });
 
 setTimeout(function() { toggleOptions('.selector'); }, 100);
+// function addBird(){
+//     var bird = $('<img src="images/bird.png" alt="Smiley face" height="80" width="80">');
+//     $(body).append(bird);
+// }
 
 
-$(document).ready(function(){
-   animateBird();
-    
-});
+
+function checkIntersection(){
+
+}
 
 function makeNewPosition(){
     
