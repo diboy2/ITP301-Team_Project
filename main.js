@@ -86,20 +86,6 @@ function animateBird(){
     
 };
 
-function calcSpeed(prev, next) {
-    
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    
-    var greatest = x > y ? x : y;
-    
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-
-}
 
 function checkCollision(){
     hit_list = $(".bird").collision(".bird-food1");
@@ -111,6 +97,7 @@ function checkCollision(){
 }
 
 function growBird(){
+    //$('.bird')
     var height = parseInt($('.bird').height()) +30;
     var width = parseInt($('.bird').width()) +30;
     $('.bird').height(height+"px");
