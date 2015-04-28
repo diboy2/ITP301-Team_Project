@@ -4,7 +4,7 @@ html, body {
 
 body {
 	margin: 0;
-	background: linear-gradient(#eee, #ccc);
+	background: url(images/sky.jpg);
 	overflow: hidden;
 }
 
