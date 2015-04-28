@@ -1,6 +1,8 @@
 var nbOptions = 8;
 var angleStart = -360;
 var birds = [];
+
+
 // jquery rotate animation
 function rotate(li,d) {
     $({d:angleStart}).animate({d:d}, {
@@ -29,11 +31,53 @@ $('.selector button').click(function(e) {
 });
 
 setTimeout(function() { toggleOptions('.selector'); }, 100);
-// function addBird(){
-//     var bird = $('<img src="images/bird.png" alt="Smiley face" height="80" width="80">');
-//     $(body).append(bird);
-// }
+function addBird(birdClass,imageSRC){
 
+    var bird = $('<img class="bird-food'+birdClass+'"  src="images/'+imageSRC+'"  alt="Smiley face" height="80" width="80">');
+    var yP = Math.random() *  $(window).height();
+    var xP = Math.random() *  $(window).width();
+    
+    // var bird={
+    //     id
+    //     yP:yP
+    //     xP:xP
+    // }   
+    bird.css({top:yP, left: xP, position:'absolute'});
+    $("body").append(bird);
+
+    
+
+
+}
+
+$(document).ready(function(){
+   animateBird();
+   $("#c1").on("click",function(){
+        addBird("1","bird.png");
+   });
+     $("#c2").on("click",function(){
+        addBird("2","bird2.png");
+   });
+     $("#c3").on("click",function(){
+        addBird("3","bird3.png");
+   });
+     $("#c4").on("click",function(){
+        addBird("4","bird4.png");
+   });
+     $("#c5").on("click",function(){
+        addBird("5","bird5.png");
+   });
+     $("#c6").on("click",function(){
+        addBird("6","bird6.png");
+   });
+     $("#c7").on("click",function(){
+        addBird("7","bird7.png");
+   });
+     $("#c8").on("click",function(){
+        addBird("8","bird7.png");
+   });
+    
+});
 
 
 function checkIntersection(){
