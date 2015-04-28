@@ -81,10 +81,6 @@ $(document).ready(function(){
 });
 
 
-function checkIntersection(){
-
-}
-
 function makeNewPosition(){
     
     // Get viewport dimensions (remove the dimension of the div)
@@ -123,8 +119,8 @@ function checkCollision(){
 
 function growBird(imageSRC){
     $('.bird').attr("src",imageSRC);
-    var height = parseInt($('.bird').height()) +30;
-    var width = parseInt($('.bird').width()) +30;
+    var height = parseInt($('.bird').height()) +20;
+    var width = parseInt($('.bird').width()) +20;
     $('.bird').height(height+"px");
     $('.bird').width(width+"px");
 
@@ -140,7 +136,7 @@ function resetBird() {
 
     isExploding=false;    
 
-    $('.bird').height("200px"); 
-    $('.bird').width("200px");
+    $('.bird').height("150px"); 
+    $('.bird').width("150px");
     $('.bird').attr("src","images/bird.png");
 }
