@@ -33,7 +33,7 @@ $('.selector button').click(function(e) {
 setTimeout(function() { toggleOptions('.selector'); }, 100);
 function addBird(birdClass,imageSRC){
 
-    var bird = $('<img class="bird-type'+birdClass+' bird-food"  src="images/'+imageSRC+'"  alt="Smiley face" height="80" width="80">');
+    var bird = $('<img class="bird-food'+birdClass+'"  src="images/'+imageSRC+'"  alt="Smiley face" height="80" width="80">');
     var yP = Math.random() *  $(window).height();
     var xP = Math.random() *  $(window).width();
     
@@ -55,28 +55,6 @@ $(document).ready(function(){
    $("#c1").on("click",function(){
         addBird("1","bird.png");
    });
-
-   $("#c2").on("click",function(){
-        addBird("2","bird2.png");
-   });
-     $("#c3").on("click",function(){
-        addBird("3","bird3.png");
-   });
-     $("#c4").on("click",function(){
-        addBird("4","bird4.png");
-   });
-     $("#c5").on("click",function(){
-        addBird("5","bird5.png");
-   });
-     $("#c6").on("click",function(){
-        addBird("6","bird6.png");
-   });
-     $("#c7").on("click",function(){
-        addBird("7","bird7.png");
-   });
-     $("#c8").on("click",function(){
-        addBird("8","bird7.png");
-    });
 });
 
 
@@ -110,7 +88,7 @@ function animateBird(){
 
 
 function checkCollision(){
-    hit_list = $(".bird").collision(".bird-food");
+    hit_list = $(".bird").collision(".bird-food1");
 
     for(i=0;i<hit_list.size();i++){
         hit_list[i].parentNode.removeChild(hit_list[i]); 
@@ -118,8 +96,8 @@ function checkCollision(){
     }
 }
 
-function growBird(imageSRC){
-    $('.bird').attr("src",imageSRC);
+function growBird(){
+    //$('.bird')
     var height = parseInt($('.bird').height()) +30;
     var width = parseInt($('.bird').width()) +30;
     $('.bird').height(height+"px");
