@@ -3,6 +3,7 @@ var angleStart = -360;
 var birds = [];
 
 var hit_list;
+var isExploding=false;
 // jquery rotate animation
 function rotate(li,d) {
     $({d:angleStart}).animate({d:d}, {
@@ -113,8 +114,10 @@ function checkCollision(){
     hit_list = $(".bird").collision(".bird-food");
 
     for(i=0;i<hit_list.size();i++){
-        hit_list[i].parentNode.removeChild(hit_list[i]); 
-        growBird(hit_list[i].src);  
+        hit_list[i].parentNode.removeChild(hit_list[i]);
+        if(!isExploding){ 
+            growBird(hit_list[i].src); 
+        } 
     }
 }
 
@@ -124,4 +127,19 @@ function growBird(imageSRC){
     var width = parseInt($('.bird').width()) +30;
     $('.bird').height(height+"px");
     $('.bird').width(width+"px");
+
+    if(height >650 || width > 650 && !isExploding){
+        $('.bird').attr("src","images/explodingbird.gif");
+        isExploding=true; 
+        setTimeout(resetBird, 1000);
+
+    }
+}
+
+function resetBird() { 
+
+    isExploding=false;    
+
+    $('.bird').height("200px"); 
+    $('.bird').width("200px");
 }
