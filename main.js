@@ -2,7 +2,7 @@ var nbOptions = 8;
 var angleStart = -360;
 var birds = [];
 
-
+var hit_list;
 // jquery rotate animation
 function rotate(li,d) {
     $({d:angleStart}).animate({d:d}, {
@@ -78,9 +78,9 @@ function makeNewPosition(){
 function animateBird(){
     var newq = makeNewPosition();
     var oldq = $('.bird').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    
-    $('.bird').animate({ top: newq[0], left: newq[1] }, speed, function(){
+   
+    checkCollision();
+    $('.bird').animate({ top: newq[0], left: newq[1] }, function(){
       animateBird();        
     });
     
@@ -99,4 +99,20 @@ function calcSpeed(prev, next) {
 
     return speed;
 
+}
+
+function checkCollision(){
+    hit_list = $(".bird").collision(".bird-food1");
+
+    for(i=0;i<hit_list.size();i++){
+        hit_list[i].parentNode.removeChild(hit_list[i]); 
+        growBird(hit_list[i].src);  
+    }
+}
+
+function growBird(){
+    var height = parseInt($('.bird').height()) +30;
+    var width = parseInt($('.bird').width()) +30;
+    $('.bird').height(height+"px");
+    $('.bird').width(width+"px");
 }
